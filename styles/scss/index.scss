@@ -1,0 +1,87 @@
+@import "cssDrop";
+
+// html {
+//   height: 100vh;
+//   padding: 1em;
+//   background-color: bisque;
+// }
+
+body {
+  height: 100vh;
+  padding: 0.5em;
+
+  background-color: bisque;
+}
+
+// Левая панель со всеми настройками и тренировками
+.main-bar {
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  height: 100%;
+  width: 40%;
+  padding: 2em 1em 1em 1em;
+
+  background-color: rgb(36, 35, 35);
+
+  header {
+    .logo-wrap {
+      margin: auto;
+      width: 6em;
+    }
+  }
+
+  form {
+    margin-top: 1em;
+    padding: 0.5em 0.25em;
+    color: white;
+    background-color: grey;
+    border-radius: 0.2em;
+
+    fieldset {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 1em;
+      row-gap: 0.2em;
+
+      border: none;
+
+      input,
+      select {
+        width: 50%;
+        padding: 0 1em;
+
+        border-radius: 1em;
+        border: none;
+      }
+
+      .tile {
+        display: flex;
+        justify-content: space-between;
+
+        &.hidden {
+          display: none;
+        }
+      }
+    }
+  }
+
+  footer {
+    color: rgb(156, 156, 156);
+
+    a {
+      color: inherit;
+    }
+
+    h4,
+    a {
+      margin: auto;
+
+      display: block;
+      width: max-content;
+    }
+  }
+}
+
+.map {
+  width: 60%;
+}

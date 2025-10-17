@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./styles/css/index.css" />
+
+    <script src="https://api-maps.yandex.ru/2.1?apikey=9b03b063-4384-42e8-ac99-e305d7eaf9e0&lang=ru_RU"></script>
+
+    <script src="./scripts/index.js" defer></script>
+
+    <title>Кардио</title>
+  </head>
+  <body>
+    <section class="main-bar">
+      <header>
+        <div class="logo-wrap">
+          <img src="./icon.png" alt="logo" />
+        </div>
+      </header>
+
+      <form>
+        <fieldset>
+          <legend hidden>Выбор типа тренеровки и внесение данных (расстояния, длительности и подъема)</legend>
+
+          <div class="tile">
+            <label for="type">Тип</label>
+            <select name="type" id="input-type">
+              <option value="run">Бег</option>
+              <option value="bike">Велосипед</option>
+            </select>
+          </div>
+
+          <div class="tile">
+            <label for="distance">Расстояние</label>
+            <input type="number" name="distance" id="distance" placeholder="км" />
+          </div>
+
+          <div class="tile">
+            <label for="time">Длительность</label>
+            <input type="number" name="time" id="time" placeholder="мин" />
+          </div>
+
+          <div class="tile">
+            <label for="tempo">Темп</label>
+            <input type="number" name="tempo" id="tempo" placeholder="шаг/мин" />
+          </div>
+
+          <div class="tile hidden">
+            <label for="rise">Подъем</label>
+            <input type="number" name="rise" id="rise" placeholder="м" />
+          </div>
+        </fieldset>
+      </form>
+
+      <div class="training"></div>
+
+      <footer>
+        <h4>Работай и будет тебе счастье</h4>
+        <a href="#">Lomove</a>
+      </footer>
+    </section>
+
+    <section class="map"></section>
+  </body>
+</html>
